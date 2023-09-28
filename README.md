@@ -15,4 +15,4 @@
 - Police bouton hover #FFD700
 
 <br/><br/>
-![schema]()
+![schema](sing_khalytia_PS1_582-324MO/assets/images/schema.png)
