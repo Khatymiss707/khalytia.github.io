@@ -3,7 +3,6 @@
 
 **Genre:** Horreur/Aventure <br/>
 **Inspiration:** [Your turn to die](https://vgperson.com/games/yourturntodie/) <br/>
-<<<<<<< Updated upstream
 **Palette de couleurs**
 
 - Fond site #191970 
@@ -16,7 +15,4 @@
 - Police bouton hover #FFD700
 
 <br/><br/>
-![schema](vous-etes-le-hero-a-toi-de-voter/sing_khalytia_PS1_582-324MO/assets/images/schema_drawio.png)
-=======
-**Palette de couleurs:** 
->>>>>>> Stashed changes
+![schema]()
