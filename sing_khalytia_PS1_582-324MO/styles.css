@@ -12,11 +12,9 @@ body {
 }
 
 .jeu {
-  height: 700px;
+  height: 750px;
   width: 900px;
   background-color: #15328a;
-  display: flex;
-  justify-content: center;
 }
 
 .jeu h1 {
@@ -56,21 +54,19 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 60%;
-  width: 100%;
-  margin-top: 22%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  width: 90%;
+  margin: 5%;
+  margin-top: 2%;
+  margin-bottom: 10px;
 }
 
 .choixmenu {
-  height: 100%;
+  height: 5%;
   width: 100%;
   top: 43%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 20px; 
+  justify-content: space-around;
+  align-items: flex-start; 
 }
 
 .choixmenu button {
@@ -86,6 +82,7 @@ body {
   margin-bottom: 40px;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .choixmenu button:hover {
