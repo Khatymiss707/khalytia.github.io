@@ -211,21 +211,24 @@ let image = document.querySelector(".imgmenu");
 let bParent = document.querySelector(".choixmenu"); 
  
 function goToChapter(chapter) {
-    if (chapters[chapter]) {
+
+    const chapitre = chapters[chapter]; 
+
+    if (chapitre) {
 
         while (bParent.firstChild) { 
             bParent.removeChild(bParent.firstChild); 
         } 
-        titre.innerHTML = chapters[chapter].titre; 
-        description.innerHTML = chapters[chapter].description;
-        image.src = chapters[chapter].image; 
+        titre.innerHTML = chapitre.titre; 
+        description.innerHTML = chapitre.description;
+        image.src = chapitre.image; 
 
-        for (let i = 0; i < chapters[chapter].boutons.length; i++) { 
+        for (let i = 0; i < chapitre.boutons.length; i++) { 
             const nouveauBtn = document.createElement('button'); 
 
-            nouveauBtn.textContent =  chapters[chapter].boutons[i].titre; 
+            nouveauBtn.textContent =  chapitre.boutons[i].titre; 
             nouveauBtn.addEventListener('click', () => { 
-                goToChapter(chapters[chapter].boutons[i].destination) 
+                goToChapter(chapitre.boutons[i].destination) 
             }); 
 
             bParent.appendChild(nouveauBtn); 

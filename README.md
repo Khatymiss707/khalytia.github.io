@@ -1,8 +1,8 @@
 # À toi de voter
 [Développement web - Projet vous êtes le héros](https://smnarnold.com/projets/vous-etes-le-heros)
 
-**Genre:** Horreur/Aventure <br/>
-**Inspiration:** [Your turn to die](https://vgperson.com/games/yourturntodie/) <br/>
+**Genre:** Horreur/Aventure
+**Inspiration:** [Your turn to die](https://vgperson.com/games/yourturntodie/)
 **Palette de couleurs**
 
 - Fond site #191970 
@@ -14,5 +14,4 @@
 - Police bouton #FFFFFF
 - Police bouton hover #FFD700
 
-<br/><br/>
-![schema](sing_khalytia_PS1_582-324MO/assets/images/schema.png)
+![schema](./assets/drawio/schema.png)
