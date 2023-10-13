@@ -1,0 +1,96 @@
+@font-face {
+  src: url("/sing_khalytia_PS1_582-324MO/assets/fonts/upheaval/upheavtt.ttf") format("truetype");
+  font-family: "Upheaval";
+}
+
+body {
+  background-color: #191970;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jeu {
+  height: 800px;
+  width: 900px;
+  background-color: #15328a;
+}
+
+.jeu h1 {
+  font-family: "Upheaval";
+  font-size: 300%;
+  color: #ffd700;
+  text-shadow: 2px 2px black;
+  display: flex;
+  justify-content: center;
+}
+
+.jeu h3 {
+  font-family: Helvetica, sans-serif;
+  color: white;
+  text-shadow: 2px 2px black;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.descriptiondiv {
+  height: 200px; 
+  width: 93.3%; 
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.jeu p {
+  font-family: Helvetica, sans-serif;
+  color: white;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgmenu {
+  min-width: 100%;
+  width: 100%;
+
+}
+
+.choixmenu {
+  height: 5%;
+  width: 100%;
+  margin-top: 1%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; 
+}
+
+.choixmenu button {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px 32px;
+  color: white;
+  background-color: #00008b;
+  text-transform: uppercase;
+  border: none;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.choixmenu button:hover {
+  background-color: #000080;
+  color: #ffd700;
+}
+
+
+
+
+
