@@ -102,6 +102,24 @@ body {
   
 }
 
+.reset {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px 32px;
+  color: white;
+  background-color: #00008b;
+  text-transform: uppercase;
+  border: none;
+  top: 7%; 
+  left: 5%; 
+  position: absolute;
+}
+
+.reset:hover {
+  background-color: #910b0b;
+}
 
 
 

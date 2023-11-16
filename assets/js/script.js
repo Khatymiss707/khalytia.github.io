@@ -1,9 +1,20 @@
 const chapters = {
+  main: {
+    titre: "Jeu de la mort",
+    description: "Tu te retrouves avec un groupe d'inconnus et c'est à toi de relever les défis afin de pouvoir vous échapper de cet endroit cruel.",
+    image: "./assets/images/images_jeu/image_principale.png",
+    musique: "",
+    boutons: [{
+      titre: "▶ Commencer",
+      destination: "debut",
+    }, ],
+  },
+
   debut: {
     titre: "Introductions",
     description: "Tu te réveilles, souffrant d'un terrible mal de tête, sur un sol glacial. Tu te souviens avoir été enlevé en plein jour et assommé, et tu remarques quatre autres personnes dans la pièce. L'une d'entre elles tend une main pour t'aider à te lever, mais tu hésites. Voyant ton incertitude, il propose les présentations. Keith, un policier, se présente, manifestant une certaine hésitation dans sa voix. Roxie, au look punk, révèle avoir vécu la même situation que toi, et Anna, une jeune fille d'environ 12 à 14 ans, semble en détresse. Ne sachant pas quoi faire, tu la réconfortes, comprenant sa situation. En te retournant, tu remarques que le dernier membre du groupe a trouvé un bouton qui cache des portes. Il se moque de votre perte de temps au lieu de chercher une sortie et entre dans l'une des portes sans vous attendre. Roxie exprime son agacement et présente Steve comme quelqu'un de têtu et arrogant. Malgré tout, il a accompli quelque chose, et pour ne pas vous séparer davantage dans cet endroit inconnu, vous décidez de le suivre de près.",
     image: "./assets/images/images_jeu/debut.png",
-    musique: "",
+    musique: "kaisou_ost.mp3",
     boutons: [{
       titre: "▶ Continuer",
       destination: "bar",
@@ -46,7 +57,7 @@ const chapters = {
   },
   bouteilles2: {
     titre: "Montre à personne",
-    description: "▶ Tu décides d'inspecter les bouteilles. Peut-être que la solution se cache juste sous nos yeux ? En soulevant et en secouant chaque bouteille, tu remarques une carte suspecte sous l'une d’elles. Elle est petite et illustrée avec un symbole de clé. Confus, tu retournes la carte pour y trouver un court paragraphe. La clé de la maîtrise assure l'immunité, mais à quel prix ? Garde-la secrète, sinon le danger guette. Pris de panique, tu scrutes rapidement la pièce avant de glisser la carte dans l'une de tes poches. Anna et Steve reviennent dans le bar et vous prenez une pause sur les chaises. Tu remarques qu’Anna semblent encore plus en détresse que tantôt. ",
+    description: "Tu décides d'inspecter les bouteilles. Peut-être que la solution se cache juste sous nos yeux ? En soulevant et en secouant chaque bouteille, tu remarques une carte suspecte sous l'une d’elles. Elle est petite et illustrée avec un symbole de clé. Confus, tu retournes la carte pour y trouver un court paragraphe. La clé de la maîtrise assure l'immunité, mais à quel prix ? Garde-la secrète, sinon le danger guette. Pris de panique, tu scrutes rapidement la pièce avant de glisser la carte dans l'une de tes poches. Anna et Steve reviennent dans le bar et vous prenez une pause sur les chaises. Tu remarques qu’Anna semblent encore plus en détresse que tantôt. ",
     image: "./assets/images/images_jeu/keymaster.png",
     musique: "samurai_woman_ost.mp3",
     boutons: [{
@@ -292,38 +303,49 @@ let description = document.querySelector(".description");
 let image = document.querySelector(".imgmenu");
 let vid = document.querySelector(".video");
 let bParent = document.querySelector(".choixmenu");
+let resetBtn = document.querySelector(".reset"); 
+
 const audioBtn = new Audio("./assets/audio/select07.mp3");
 let audio2 = document.createElement("audio");
 audio2.src = "";
 
-
+//GOTOCHAPTER
 function goToChapter(chapter) {
+
+  //sauvegarde
+  localStorage.setItem("sauvegarde", chapter);
+
   const chapitre = chapters[chapter];
 
+  /*audio_background (MARCHE PAS AVEC LA SAUVEGARDE)
   if (!audio2.src.endsWith(chapitre.musique)) {
-    audio2.src = './assets/audio/' + chapitre.musique;
-    audio2.play();
-    audio2.currentTime = 2;
-  }
+      audio2.src = './assets/audio/' + chapitre.musique;
+      audio2.play();
+      audio2.currentTime = 2;
+    } */
 
+  //btn_removal
   if (chapitre) {
     while (bParent.firstChild) {
       bParent.removeChild(bParent.firstChild);
     }
 
-    if (chapitre.video) {
-      titre.innerHTML = chapitre.titre;
-      description.innerHTML = chapitre.description;
-      image.style.display = "none";
-      vid.style.display = "block";
-      vid.style.order = 1;
-      vid.src = chapitre.video; //it shows up, just not superposé; 
-      vid.play();
+  //changement_html
+  if (chapitre.video) {
+    titre.innerHTML = chapitre.titre;
+    description.innerHTML = chapitre.description;
+    image.style.display = "none";
+    vid.style.display = "block";
+    vid.style.order = 1;
+    vid.src = chapitre.video;
+    vid.play();
 
+      //btn_creation
       for (let i = 0; i < chapitre.boutons.length; i++) {
         const nouveauBtn = document.createElement("button");
 
         nouveauBtn.textContent = chapitre.boutons[i].titre;
+
         nouveauBtn.addEventListener("click", () => {
           audioBtn.play();
           goToChapter(chapitre.boutons[i].destination);
@@ -332,6 +354,7 @@ function goToChapter(chapter) {
         bParent.appendChild(nouveauBtn);
       }
     } else {
+
       image.style.display = "block";
       vid.style.display = "none";
       vid.style.order = 2;
@@ -343,15 +366,28 @@ function goToChapter(chapter) {
         const nouveauBtn = document.createElement("button");
 
         nouveauBtn.textContent = chapitre.boutons[i].titre;
+
         nouveauBtn.addEventListener("click", () => {
           audioBtn.play();
           goToChapter(chapitre.boutons[i].destination);
         });
 
         bParent.appendChild(nouveauBtn);
+
       }
     }
   }
 }
 
-goToChapter("debut");
+let sauvegarde = localStorage.getItem("sauvegarde"); 
+
+if (sauvegarde !== null) {
+  goToChapter(sauvegarde);
+} else {
+  goToChapter("main");
+}
+
+resetBtn.addEventListener("click", () => {
+  localStorage.clear();
+  goToChapter("main");
+})
