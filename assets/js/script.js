@@ -1,7 +1,7 @@
 const chapters = {
   main: {
     titre: "Jeu de la mort",
-    description: "Tu te retrouves avec un groupe d'inconnus et c'est à toi de relever les défis afin de pouvoir vous échapper de cet endroit cruel.",
+    description: "Tu te réveilles, souffrant d'un terrible mal de tête, sur un sol glacial. Tu te souviens avoir été enlevé en plein jour et assommé, et tu remarques quatre autres personnes dans la pièce. L'une d'entre elles tend une main pour t'aider à te lever, mais tu hésites. Voyant ton incertitude, il propose les présentations.",
     image: "./assets/images/images_jeu/image_principale.png",
     musique: "",
     boutons: [{
@@ -12,14 +12,26 @@ const chapters = {
 
   debut: {
     titre: "Introductions",
-    description: "Tu te réveilles, souffrant d'un terrible mal de tête, sur un sol glacial. Tu te souviens avoir été enlevé en plein jour et assommé, et tu remarques quatre autres personnes dans la pièce. L'une d'entre elles tend une main pour t'aider à te lever, mais tu hésites. Voyant ton incertitude, il propose les présentations. Keith, un policier, se présente, manifestant une certaine hésitation dans sa voix. Roxie, au look punk, révèle avoir vécu la même situation que toi, et Anna, une jeune fille d'environ 12 à 14 ans, semble en détresse. Ne sachant pas quoi faire, tu la réconfortes, comprenant sa situation. En te retournant, tu remarques que le dernier membre du groupe a trouvé un bouton qui cache des portes. Il se moque de votre perte de temps au lieu de chercher une sortie et entre dans l'une des portes sans vous attendre. Roxie exprime son agacement et présente Steve comme quelqu'un de têtu et arrogant. Malgré tout, il a accompli quelque chose, et pour ne pas vous séparer davantage dans cet endroit inconnu, vous décidez de le suivre de près.",
+    description: " Keith, un policier, se présente, manifestant une certaine hésitation dans sa voix. Roxie, au look punk, révèle avoir vécu la même situation que toi, et Anna, une jeune fille d'environ 12 à 14 ans, semble en détresse. Ne sachant pas quoi faire, tu la réconfortes, comprenant sa situation.",
+    image: "./assets/images/images_jeu/debut.png",
+    musique: "kaisou_ost.mp3",
+    boutons: [{
+      titre: "▶ Continuer",
+      destination: "porte",
+    }, ],
+  },
+
+  porte: {
+    titre: "Vert est la couleur de la jalousie",
+    description: "En te retournant, tu remarques que le dernier membre du groupe a trouvé un bouton qui cache des portes. Il se moque de votre perte de temps au lieu de chercher une sortie et entre dans l'une des portes sans vous attendre. Roxie exprime son agacement et présente Steve comme quelqu'un de têtu et arrogant. Malgré tout, il a accompli quelque chose, et pour ne pas vous séparer davantage dans cet endroit inconnu, vous décidez de le suivre de près.",
     image: "./assets/images/images_jeu/debut.png",
     musique: "kaisou_ost.mp3",
     boutons: [{
       titre: "▶ Continuer",
       destination: "bar",
     }, ],
-  },
+  }, 
+
   bar: {
     titre: "Un bar",
     description: "Vous entrez dans une pièce qui évoque un bar, baignée dans une douce ambiance jazz, créant ainsi une atmosphère réconfortante. Le groupe, visiblement moins tendu, se disperse pour chercher un indice ou une sortie. Que décides-tu investiger?",
@@ -47,7 +59,7 @@ const chapters = {
   },
   bouteilles1: {
     titre: "Montre à personne",
-    description: "Tu décides d'inspecter les bouteilles. Peut-être que la solution se cache juste sous nos yeux ? En soulevant et en secouant chaque bouteille, tu remarques une carte suspecte sous l'une d’elles. Elle est petite et illustrée avec un symbole de clé. Confus, tu retournes la carte pour y trouver un court paragraphe. La clé de la maîtrise assure l'immunité, mais à quel prix ? Garde-la secrète, sinon le danger guette. Pris de panique, tu scrutes rapidement la pièce avant de glisser la carte dans l'une de tes poches. Vous continuez à fouiller le bar avant de prendre une pause sur les chaises. Tu remarques qu’Anna semblent encore plus en détresse que tantôt. Keith remarque ton hausse de nervosité, mais tu lui dit que tout est correct.",
+    description: "Tu décides d'inspecter les bouteilles. En soulevant et en secouant chaque bouteille, tu remarques une carte suspecte sous l'une d’elles. Elle est petite et illustrée avec un symbole de clé. Confus, tu retournes la carte pour y trouver un court paragraphe. La clé de la maîtrise assure l'immunité, mais à quel prix ? Garde-la secrète, sinon le danger guette. Pris de panique, tu scrutes rapidement la pièce avant de glisser la carte dans l'une de tes poches. Vous continuez à fouiller le bar avant de prendre une pause sur les chaises. Tu remarques qu’Anna semblent encore plus en détresse que tantôt. Keith remarque ton hausse de nervosité, mais tu lui dit que tout est correct.",
     image: "./assets/images/images_jeu/keymaster.png",
     musique: "exploration_ost.mp3",
     boutons: [{
@@ -57,7 +69,7 @@ const chapters = {
   },
   bouteilles2: {
     titre: "Montre à personne",
-    description: "Tu décides d'inspecter les bouteilles. Peut-être que la solution se cache juste sous nos yeux ? En soulevant et en secouant chaque bouteille, tu remarques une carte suspecte sous l'une d’elles. Elle est petite et illustrée avec un symbole de clé. Confus, tu retournes la carte pour y trouver un court paragraphe. La clé de la maîtrise assure l'immunité, mais à quel prix ? Garde-la secrète, sinon le danger guette. Pris de panique, tu scrutes rapidement la pièce avant de glisser la carte dans l'une de tes poches. Anna et Steve reviennent dans le bar et vous prenez une pause sur les chaises. Tu remarques qu’Anna semblent encore plus en détresse que tantôt. ",
+    description: "Tu décides d'inspecter les bouteilles. En soulevant et en secouant chaque bouteille, tu remarques une carte suspecte sous l'une d’elles. Elle est petite et illustrée avec un symbole de clé. Confus, tu retournes la carte pour y trouver un court paragraphe. La clé de la maîtrise assure l'immunité, mais à quel prix ? Garde-la secrète, sinon le danger guette. Pris de panique, tu scrutes rapidement la pièce avant de glisser la carte dans l'une de tes poches. Anna et Steve reviennent dans le bar et vous prenez une pause sur les chaises. Tu remarques qu’Anna semblent encore plus en détresse que tantôt. ",
     image: "./assets/images/images_jeu/keymaster.png",
     musique: "samurai_woman_ost.mp3",
     boutons: [{
@@ -102,7 +114,7 @@ const chapters = {
     musique: "kaisou_ost.mp3",
     boutons: [{
       titre: "▶ Recommencer",
-      destination: "debut",
+      destination: "main",
     }, ],
   },
   forcelait2: {
@@ -112,12 +124,12 @@ const chapters = {
     musique: "kaisou_ost.mp3",
     boutons: [{
       titre: "▶ Recommencer",
-      destination: "debut",
+      destination: "main",
     }, ],
   },
   aidelait1: {
     titre: "Aide appréciée",
-    description: "Tu décides de boire ta boisson, avalant gorgée après gorgée malgré le vomissement, tout ça pour aider Anna. Impressionnés, les autres se joignent à toi pour finir la boisson ensemble. Cette expérience vous rapproche, Roxie te félicite pour ton courage et te témoigne sa loyauté. Les barres de métal se rétractent, vous permettant de sortir et d'explorer d'autres pièces. Après avoir traversé plusieurs chambres et épreuves, Roxie t'emmène à l'écart pour exprimer ses inquiétudes concernant Anna, qui semble épuisée et stressée. Elle propose de la laisser se reposer et après discussion, vous réalisez que vous avez perdu le reste du groupe. La voix retentit dans les haut-parleurs et vous sépare dans des salles distinctes. Le jeu final va commencer !",
+    description: "Tu décides de boire ta boisson, avalant gorgée après gorgée malgré le vomissement. Impressionnés, les autres se joignent à toi pour finir la boisson ensemble. Roxie te félicite pour ton courage et te témoigne sa loyauté. Les barres de métal se rétractent, vous permettant de sortir et d'explorer d'autres pièces. Après avoir traversé plusieurs chambres et épreuves, Roxie t'emmène à l'écart pour exprimer ses inquiétudes concernant Anna, qui semble épuisée et stressée. Elle propose de la laisser se reposer et après discussion, vous réalisez que vous avez perdu le reste du groupe. La voix retentit dans les haut-parleurs et vous sépare dans des salles distinctes. Le jeu final va commencer !",
     image: "./assets/images/images_jeu/roxie_concerne.png",
     musique: "kaisou_ost.mp3",
     boutons: [{
@@ -127,7 +139,7 @@ const chapters = {
   },
   aidelait2: {
     titre: "Aide appréciée",
-    description: "Tu décides de boire ta boisson, avalant gorgée après gorgée malgré le vomissement, tout ça pour aider Anna. Impressionnés, les autres se joignent à toi pour finir la boisson ensemble. Cette expérience vous rapproche, Roxie te félicite pour ton courage et te témoigne sa loyauté. Les barres de métal se rétractent, vous permettant de sortir et d'explorer d'autres pièces. Après avoir traversé plusieurs chambres et épreuves, Roxie t'emmène à l'écart pour exprimer ses inquiétudes concernant Anna, qui semble épuisée et stressée. Elle propose de la laisser se reposer et après discussion, vous réalisez que vous avez perdu le reste du groupe. La voix retentit dans les haut-parleurs et vous sépare dans des salles distinctes. Le jeu final va commencer !",
+    description: "Tu décides de boire ta boisson, avalant gorgée après gorgée malgré le vomissement. Impressionnés, les autres se joignent à toi pour finir la boisson ensemble. Roxie te félicite pour ton courage et te témoigne sa loyauté. Les barres de métal se rétractent, vous permettant de sortir et d'explorer d'autres pièces. Après avoir traversé plusieurs chambres et épreuves, Roxie t'emmène à l'écart pour exprimer ses inquiétudes concernant Anna, qui semble épuisée et stressée. Elle propose de la laisser se reposer et après discussion, vous réalisez que vous avez perdu le reste du groupe. La voix retentit dans les haut-parleurs et vous sépare dans des salles distinctes. Le jeu final va commencer !",
     image: "./assets/images/images_jeu/roxie_concerne.png",
     musique: "kaisou_ost.mp3",
     boutons: [{
@@ -253,7 +265,7 @@ const chapters = {
     musique: "ithukusimu_ost.mp3",
     boutons: [{
       titre: "▶ Recommencer",
-      destination: "debut",
+      destination: "main",
     }, ],
   },
   anna: {
@@ -263,7 +275,7 @@ const chapters = {
     musique: "ithukusimu_ost.mp3",
     boutons: [{
       titre: "▶ Recommencer",
-      destination: "debut",
+      destination: "main",
     }, ],
   },
   roxie: {
@@ -273,7 +285,7 @@ const chapters = {
     musique: "ithukusimu_ost.mp3",
     boutons: [{
       titre: "▶ Recommencer",
-      destination: "debut",
+      destination: "main",
     }, ],
   },
   steve: {
@@ -283,7 +295,7 @@ const chapters = {
     musique: "not_so_sou_ost.mp3",
     boutons: [{
       titre: "▶ Recommencer",
-      destination: "debut",
+      destination: "main",
     }, ],
   },
   pitie: {
@@ -293,7 +305,7 @@ const chapters = {
     musique: "ithukusimu_ost.mp3",
     boutons: [{
       titre: "▶ Recommencer",
-      destination: "debut",
+      destination: "main",
     }, ],
   },
 };
@@ -317,12 +329,12 @@ function goToChapter(chapter) {
 
   const chapitre = chapters[chapter];
 
-  /*audio_background (MARCHE PAS AVEC LA SAUVEGARDE)
+ 
   if (!audio2.src.endsWith(chapitre.musique)) {
       audio2.src = './assets/audio/' + chapitre.musique;
       audio2.play();
       audio2.currentTime = 2;
-    } */
+    } 
 
   //btn_removal
   if (chapitre) {
