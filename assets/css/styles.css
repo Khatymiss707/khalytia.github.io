@@ -14,7 +14,6 @@
   }
   
   .jeu {
-    height: 90vh;
     width: 60vw;
     background-color: #081746;
     border-radius: 2%;
@@ -39,17 +38,13 @@
   }
   
   .descriptiondiv {
-    height: 12vh; 
-    width: 94%; 
-    padding-left: 30px;
-    padding-right: 30px;
     display: flex;
     justify-content: center;
-    margin-top: -7.5em;
     background-color: rgba(19, 19, 19, 0.8);
     z-index: 2; 
     position: relative; 
     border: 3px solid #ffe65a;
+    margin-top: -70px;
   }
   
   .jeu p {
@@ -60,7 +55,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.7vw;
   }
   
   .imgmenu {
@@ -73,14 +67,13 @@
   .video {
     max-width: 100%;
     height: 48%; 
-    align-self: center;
-    margin: 0 12%; 
+    align-self: center; 
   }
   
   .choixmenu {
     height: 5%;
     width: 100%;
-    margin-top: 2%;
+    margin-top: 4%;
     display: flex;
     justify-content: space-around;
     align-items: flex-start; 
@@ -96,7 +89,6 @@
     background-color: #00008b;
     text-transform: uppercase;
     border: none;
-    margin-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -123,9 +115,6 @@
     background-color: #00008b;
     text-transform: uppercase;
     border: none;
-    top: 7%; 
-    left: 5%; 
-    position: absolute;
   }
   
   .reset:hover {
@@ -200,7 +189,31 @@
     justify-content: space-around;
     align-items: flex-start; 
   }
-  
+
+  .choixmenu2 {
+    height: 5%;
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+  }
+
+  .choixmenu2 button {
+    font-family: Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px 32px;
+    color: white;
+    background-color: #00008b;
+    text-transform: uppercase;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 5px 5px;
+  }
 
   .choixmenu button {
     font-family: Helvetica, sans-serif;
@@ -220,16 +233,22 @@
 
   .reset {
     font-family: Helvetica, sans-serif;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     font-weight: 600;
-    padding: 10px 32px;
+    padding: 15px 32px;
     color: white;
     background-color: #00008b;
     text-transform: uppercase;
     border: none;
     bottom: 5%;
     margin: auto;
+  }
+
+  .video {
+    max-width: 100%;
+    height: 48%; 
+    align-self: center;
   }
 
 }
@@ -249,8 +268,58 @@
     width: 100%;
   }
 
+  h3 {
+    font-family: Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+  }
+
+  p {
+    font-family: Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+    font-size: 90%;
+  }
+
   .imgmenu {
     max-width: 100%;
+  }
+
+  .choixmenu button {
+    font-family: Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    background-color: #00008b;
+    text-transform: uppercase;
+    border: none;
+    display: flex;
+    margin: 5px 0 ;
+    width: 100%; 
+    padding: 5px;
+  }
+
+  .choixmenu2 button {
+    font-family: Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    background-color: #00008b;
+    text-transform: uppercase;
+    border: none;
+    display: flex;
+    margin: 5px 0 ;
+    width: 100%; 
+    padding: 5px;
   }
 
   .reset {
@@ -262,6 +331,12 @@
     text-transform: uppercase;
     border: none;
     max-width: 100%;
+  }
+
+  .video {
+    max-width: 100%;
+    height: 48%; 
+    align-self: center;
   }
 }
 
