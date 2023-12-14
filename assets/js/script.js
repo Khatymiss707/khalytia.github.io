@@ -407,22 +407,22 @@ function goToChapter(chapter) {
     audio2.currentTime = 2;
   }
 
+  //mute_checkbox
+  if (input.checked) {
+    audio2.pause();
+    audioBtn.volume = 0;
+    localStorage.setItem("mute", true);
+  } else {
+    audioBtn.volume = 1;
+    inputChecked = 0;
+    localStorage.setItem("mute", false);
+  }
+
   //btn_removal
   if (chapitre) {
     while (bParent.firstChild) {
       bParent.removeChild(bParent.firstChild);
     }
-
-  //mute_checkbox
-    if (input.checked) {
-      audio2.pause(); 
-      audioBtn.volume = 0; 
-      let inputChecked = input.checked; 
-      localStorage.setItem("mute", inputChecked);
-    } else {
-      audioBtn.volume = 1; 
-    }
-
 
     //changement_html
     if (chapitre.video) {
@@ -472,7 +472,13 @@ function goToChapter(chapter) {
 }
 
 let sauvegarde = localStorage.getItem("sauvegarde");
-let audioInput = localStorage.getItem("mute");
+
+if (localStorage.getItem("mute") === true) {
+  audio2.pause();
+  audioBtn.volume = 0;
+} else {
+  audioBtn.volume = 1;
+}
 
 if (sauvegarde !== null) {
   goToChapter(sauvegarde);

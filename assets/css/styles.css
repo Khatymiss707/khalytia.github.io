@@ -120,6 +120,12 @@
   .reset:hover {
     background-color: #910b0b;
   }
+
+  .choixmenu2 {
+    height: 5%;
+    width: 100%;
+    margin-top: 3%;
+  }
   
 }
 
